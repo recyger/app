@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "b8f2a27d59d4d6330ec5240c61736717",
-    "content-hash": "43f7887bbcec8f908c205bfde79af84b",
+    "hash": "64ad50b2bb085b9dbf2f31c40e48e957",
+    "content-hash": "6e78565355d3f2023b87cadbecbae692",
     "packages": [
         {
             "name": "recyger/client",
@@ -107,15 +107,41 @@
                 "issues": "https://github.com/recyger/lib/issues"
             },
             "time": "2016-04-01 05:47:58"
+        },
+        {
+            "name": "testing/common",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:recyger/common.git",
+                "reference": "d36f430e9f52ab7ff51fd4ee7c1275fa9f19b5a4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/recyger/common/zipball/d36f430e9f52ab7ff51fd4ee7c1275fa9f19b5a4",
+                "reference": "d36f430e9f52ab7ff51fd4ee7c1275fa9f19b5a4",
+                "shasum": ""
+            },
+            "type": "test-common",
+            "notification-url": "http://packagist.itass.local/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "author's name",
+                    "email": "email@example.com"
+                }
+            ],
+            "description": "description_text",
+            "time": "2016-04-01 11:06:51"
         }
     ],
     "packages-dev": [],
     "aliases": [],
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "stability-flags": {
-        "recyger/common": 20,
-        "recyger/client": 20,
-        "recyger/lib": 20
+        "testing/common": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
