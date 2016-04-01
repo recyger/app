@@ -4,6 +4,7 @@
   "minimum-stability": "stable",
   "license"          : "proprietary",
   "type"             : "test-app",
+  "version"          : "0.0.1",
   "authors"          : [
     {
       "name" : "author's name",
