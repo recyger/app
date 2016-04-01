@@ -8,24 +8,32 @@
     "content-hash": "6e78565355d3f2023b87cadbecbae692",
     "packages": [
         {
-            "name": "recyger/client",
+            "name": "testing/cinstaller",
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/recyger/client.git",
-                "reference": "f48cf20a374523cbf357512c8c584c725c212c65"
+                "url": "https://github.com/recyger/composer.git",
+                "reference": "9e0f9c562969b0e3b28843e24f371397fb16e322"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/recyger/client/zipball/f48cf20a374523cbf357512c8c584c725c212c65",
-                "reference": "f48cf20a374523cbf357512c8c584c725c212c65",
+                "url": "https://api.github.com/repos/recyger/composer/zipball/9e0f9c562969b0e3b28843e24f371397fb16e322",
+                "reference": "9e0f9c562969b0e3b28843e24f371397fb16e322",
                 "shasum": ""
             },
             "require": {
-                "recyger/common": "dev-master",
-                "recyger/lib": "dev-master"
+                "composer-plugin-api": "^1.0"
             },
-            "type": "test-common-base",
+            "type": "composer-plugin",
+            "extra": {
+                "class": "testing\\composer\\Plugin"
+            },
+            "autoload": {
+                "psr-4": {
+                    "testing\\composer\\": ""
+                }
+            },
+            "notification-url": "http://packagist.itass.local/downloads/",
             "license": [
                 "proprietary"
             ],
@@ -36,91 +44,25 @@
                 }
             ],
             "description": "description_text",
-            "support": {
-                "source": "https://github.com/recyger/client/tree/master",
-                "issues": "https://github.com/recyger/client/issues"
-            },
-            "time": "2016-04-01 06:19:21"
-        },
-        {
-            "name": "recyger/common",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/recyger/common.git",
-                "reference": "6b75f494d7e1f573e144c9e2f48d398450672921"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/recyger/common/zipball/6b75f494d7e1f573e144c9e2f48d398450672921",
-                "reference": "6b75f494d7e1f573e144c9e2f48d398450672921",
-                "shasum": ""
-            },
-            "require": {
-                "recyger/client": "dev-master",
-                "recyger/lib": "dev-master"
-            },
-            "type": "test-common",
-            "license": [
-                "proprietary"
-            ],
-            "authors": [
-                {
-                    "name": "author's name",
-                    "email": "email@example.com"
-                }
-            ],
-            "description": "description_text",
-            "support": {
-                "source": "https://github.com/recyger/common/tree/master",
-                "issues": "https://github.com/recyger/common/issues"
-            },
-            "time": "2016-04-01 06:22:02"
-        },
-        {
-            "name": "recyger/lib",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/recyger/lib.git",
-                "reference": "5187954310b262826f0b71e7d76a510fa309437d"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/recyger/lib/zipball/5187954310b262826f0b71e7d76a510fa309437d",
-                "reference": "5187954310b262826f0b71e7d76a510fa309437d",
-                "shasum": ""
-            },
-            "type": "test-lib",
-            "license": [
-                "proprietary"
-            ],
-            "authors": [
-                {
-                    "name": "author's name",
-                    "email": "email@example.com"
-                }
-            ],
-            "description": "description_text",
-            "support": {
-                "source": "https://github.com/recyger/lib/tree/master",
-                "issues": "https://github.com/recyger/lib/issues"
-            },
-            "time": "2016-04-01 05:47:58"
+            "time": "2016-04-01 13:08:30"
         },
         {
             "name": "testing/common",
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "git@github.com:recyger/common.git",
-                "reference": "d36f430e9f52ab7ff51fd4ee7c1275fa9f19b5a4"
+                "url": "https://github.com/recyger/common.git",
+                "reference": "3df696dcc0a8830bf8e85ab74cc22ffcec00b433"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/recyger/common/zipball/d36f430e9f52ab7ff51fd4ee7c1275fa9f19b5a4",
-                "reference": "d36f430e9f52ab7ff51fd4ee7c1275fa9f19b5a4",
+                "url": "https://api.github.com/repos/recyger/common/zipball/3df696dcc0a8830bf8e85ab74cc22ffcec00b433",
+                "reference": "3df696dcc0a8830bf8e85ab74cc22ffcec00b433",
                 "shasum": ""
+            },
+            "require": {
+                "testing/cinstaller": "dev-master",
+                "testing/lib": "dev-master"
             },
             "type": "test-common",
             "notification-url": "http://packagist.itass.local/downloads/",
@@ -134,7 +76,35 @@
                 }
             ],
             "description": "description_text",
-            "time": "2016-04-01 11:06:51"
+            "time": "2016-04-01 12:58:17"
+        },
+        {
+            "name": "testing/lib",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/recyger/lib.git",
+                "reference": "4820df924382597b6d9e5387c5ad8d5d737786f8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/recyger/lib/zipball/4820df924382597b6d9e5387c5ad8d5d737786f8",
+                "reference": "4820df924382597b6d9e5387c5ad8d5d737786f8",
+                "shasum": ""
+            },
+            "type": "test-lib",
+            "notification-url": "http://packagist.itass.local/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "author's name",
+                    "email": "email@example.com"
+                }
+            ],
+            "description": "description_text",
+            "time": "2016-04-01 11:52:37"
         }
     ],
     "packages-dev": [],
